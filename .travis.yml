@@ -1,2 +1,23 @@
-sudo: required
+sudo: require
+
+services:
+  - docker
+
+before_install: 
+  - docker build  -t afxburning/react-test -f ./client/Dockerfile.dev ./client
+
+script:
+  - docker run afxburning/react-test npm run test -- --coverage
+
+after_success:
+  - docker build -t afxburning/multi-client ./client
+  - docker build -t afxburning/multi-nginx ./nginx
+  - docker build -t afxburning/multi-server ./server
+  - docker build -t afxburning/multi-worker ./worker
+ 
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password--stdin
+  - docker push afxburning/multi-client
+  - docker push afxburning/multi-nginx
+  - docker push afxburning/multi-server
+  - docker push afxburning/multi-worker
 
