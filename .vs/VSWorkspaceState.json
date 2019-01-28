@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\client",
+    "\\nginx",
+    "\\server",
+    "\\server\\node_modules",
+    "\\worker"
+  ],
+  "SelectedNode": "\\docker-compose.yml",
+  "PreviewInSolutionExplorer": false
+}
