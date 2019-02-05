@@ -1,12 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\client",
-    "\\nginx",
-    "\\server",
-    "\\server\\node_modules",
-    "\\worker"
+    "\\nginx"
   ],
-  "SelectedNode": "\\docker-compose.yml",
+  "SelectedNode": "\\.travis.yml",
   "PreviewInSolutionExplorer": false
 }

@@ -21,3 +21,16 @@ after_success:
   - docker push afxburning/multi-server
   - docker push afxburning/multi-worker
 
+deploy:
+  provider: elastikbeanstalk
+  region: us-east-2
+  app: multi-docker
+  env: MultiDocker-env
+  bucket-name: elasticbeanstalk-us-east-2-814514827471
+  bucket-path: docker-multi
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
+
