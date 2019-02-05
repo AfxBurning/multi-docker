@@ -6,7 +6,7 @@
 			"image": "afxburning/multi-client",
 			"hostname": "client",
 			"essential": false,
-			"memory": 128
+			"memory": 192
 		},
 		{
 			"name": "server",
@@ -26,7 +26,7 @@
 			"name": "nginx",
 			"image": "afxburning/multi-nginx",
 			"essential": true,
-			"memory": 128,
+			"memory": 192,
 			"portMappings": [
 				{
 					"hostPort": 80,
