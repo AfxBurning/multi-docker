@@ -22,7 +22,7 @@ after_success:
   - docker push afxburning/multi-worker
 
 deploy:
-  provider: elastikbeanstalk
+  provider: elasticbeanstalk
   region: us-east-2
   app: multi-docker
   env: MultiDocker-env
